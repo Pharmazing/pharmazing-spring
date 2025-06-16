@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "6f23fe0a-eb5b-41c8-9e9d-e365ea9e19d3",
+		"name": "pharamazing-spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31967042"
+	},
+	"item": [
+		{
+			"name": "createUser",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation CreateUser($user: CreateUserInput!){\n    createUser(user: $user){\n        userId\n    }\n}",
+						"variables": "{\n    \"user\": {\n        \"firstName\": \"Hello\",\n        \"lastName\": \"World\",\n        \"email\": \"hello@world.com\",\n        \"password\": \"helloworld\",\n        \"age\": 23\n\n    }\n}"
+					}
+				},
+				"url": "localhost:8080/api/graphql"
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

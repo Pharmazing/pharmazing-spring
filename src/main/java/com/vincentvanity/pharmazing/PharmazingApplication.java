@@ -11,7 +11,7 @@ public class PharmazingApplication {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = SpringApplication.run(PharmazingApplication.class, args);
+		SpringApplication.run(PharmazingApplication.class, args);
 
 	}
 

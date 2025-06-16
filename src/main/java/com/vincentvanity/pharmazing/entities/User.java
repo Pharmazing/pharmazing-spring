@@ -26,7 +26,7 @@ public class User {
     @Column(name="password")
     private String password;
 
-    @Column(name="updatedAt", nullable = true)
+    @Column(name="updatedAt")
     private String updatedAt;
 
     @Column(name="createdAt")
@@ -53,6 +53,7 @@ public class User {
         String formattedDateTime = now.format(formatter);
 
         this.createdAt = formattedDateTime;
+        this.updatedAt = formattedDateTime;
     }
 
     public Long getUserId() {
