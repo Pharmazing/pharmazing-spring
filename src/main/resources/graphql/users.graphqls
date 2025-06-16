@@ -1,0 +1,27 @@
+type Query {
+    getAllUsers: [User]!
+}
+
+type Mutation {
+    createUser(user: CreateUserInput): User!
+}
+
+type User {
+    userId: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    age: Int
+    cartId: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateUserInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    age: Int!
+}
