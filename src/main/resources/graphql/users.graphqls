@@ -1,5 +1,6 @@
 type Query {
     getAllUsers: [User]!
+
 }
 
 type Mutation {
@@ -12,7 +13,7 @@ type User {
     lastName: String!
     email: String!
     password: String!
-    age: Int
+    age: Int!
     cartId: String
     createdAt: String!
     updatedAt: String!
