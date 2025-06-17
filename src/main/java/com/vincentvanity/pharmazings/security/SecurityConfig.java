@@ -1,4 +1,4 @@
-package com.vincentvanity.pharmazing.security;
+package com.vincentvanity.pharmazings.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/graphql").permitAll() // Secure the /graphql endpoint
                         .requestMatchers("/graphiql").permitAll()
-                        .anyRequest().permitAll() // Allow other requests
+                        .anyRequest().authenticated() // Allow other requests
                 )
                 .build();
 

@@ -1,4 +1,4 @@
-package com.vincentvanity.pharmazing.entities;
+package com.vincentvanity.pharmazings.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;

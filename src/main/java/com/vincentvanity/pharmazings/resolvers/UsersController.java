@@ -1,18 +1,23 @@
-package com.vincentvanity.pharmazing.resolvers;
+package com.vincentvanity.pharmazings.resolvers;
 
-import com.vincentvanity.pharmazing.entities.User;
-import com.vincentvanity.pharmazing.models.CreateUserInput;
-import com.vincentvanity.pharmazing.respositories.UserRepository;
+import com.vincentvanity.pharmazings.entities.User;
+import com.vincentvanity.pharmazings.models.CreateUserInput;
+import com.vincentvanity.pharmazings.respositories.UserRepository;
 import graphql.scalars.ExtendedScalars;
 import graphql.schema.GraphQLScalarType;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@Slf4j
 @Controller
+@CrossOrigin
 @Service
 public class UsersController {
 
@@ -28,7 +33,9 @@ public class UsersController {
     }
 
     @QueryMapping
+    @PreAuthorize("isAuthenticated()")
     public Iterable<User> getAllUsers() {
+        log.info("GQLQuery:: GetAllUsers");
         return userRepository.findAll();
     }
 

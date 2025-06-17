@@ -1,3 +1,3 @@
-package com.vincentvanity.pharmazing.models;
+package com.vincentvanity.pharmazings.models;
 
 public record CreateUserInput (String firstName, String lastName, String email, String password, Integer age){}

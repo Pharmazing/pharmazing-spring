@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.vincentvanity</groupId>
-	<artifactId>pharmazing</artifactId>
+	<artifactId>pharmazings</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pharmazing</name>
+	<name>pharmazings</name>
 	<description>Backend for Pharmazing</description>
 	<url/>
 	<licenses>

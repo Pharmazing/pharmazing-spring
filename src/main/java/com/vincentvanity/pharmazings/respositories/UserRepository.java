@@ -1,6 +1,6 @@
-package com.vincentvanity.pharmazing.respositories;
+package com.vincentvanity.pharmazings.respositories;
 
-import com.vincentvanity.pharmazing.entities.User;
+import com.vincentvanity.pharmazings.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
